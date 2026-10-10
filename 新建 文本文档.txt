@@ -1,0 +1,21 @@
+LCD接口：
+	SPI_SCL-> PB3
+        SPI_MOSI-> PB5
+        LCD_CS -> PB4
+        LCD_DC -> PB6
+        LCD_BL -> PB7
+IMU I2C接口：
+	SDA -> PA11
+        SCL -> PA12
+        INT -> PC5
+蓝牙uart接口：
+        RX -> PA10
+        TX -> PA9
+编码器:
+	E1A -> PC6(TIME3_CH1)
+        E1B -> PC7(TIME3_CH2) 
+        E2A - > PA0(TIME2_CH1) 
+        E2B - > PA0(TIME2_CH2)
+电机：
+	PWM1 -> PB8
+        PWM3 -> PB9
