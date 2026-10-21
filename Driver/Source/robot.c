@@ -73,19 +73,19 @@ int16_t  ax_balance_angle; //平衡倾角
 int16_t  ax_balance_gyro;  //平衡陀螺仪角速度
 int16_t  ax_balance_out;   //平衡控制输出
 int16_t  ax_balance_kp = 2700; //1800;  //2700;	//平衡kp   
-int16_t  ax_balance_kd = 135;	//60; 平衡Kd 
+int16_t  ax_balance_kd = 135;	 //60; 平衡Kd 
 
 //机器人速度控制
 int16_t  ax_velocity = 0;  //速度值
 int16_t  ax_velocity_out;	//速度控制输出
-int16_t  ax_velocity_kp = 8000;	  //速度kp
-int16_t  ax_velocity_ki = 4000;	    //速度ki
+int16_t  ax_velocity_kp = 8000; //8000;	  //速度kp
+int16_t  ax_velocity_ki = 4000; //4000;	    //速度ki
 
 //机器人转向控制
 int16_t  ax_turn_gyro;    //转向陀螺仪角速度
 int16_t  ax_turn_out;	  //转向控制输出
-int16_t  ax_turn_kp = 1000;	//转向kp系数
-int16_t  ax_turn_kd = 5000;	//转向kd系数
+int16_t  ax_turn_kp = 1000; //1000;	//转向kp系数
+int16_t  ax_turn_kd = 5000; //5000;	//转向kd系数
 
 /******************* (C) 版权 2023 XTARK **************************************/
 

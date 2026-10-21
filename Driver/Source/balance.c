@@ -83,7 +83,7 @@ void Balance_execute(void){
 		if(ax_robot_move_enable == 1)
 		{	
 			MOTOR_A_SetSpeed( -wheel_pwm_l);//控制左侧电机
-			MOTOR_B_SetSpeed(  wheel_pwm_r);//控制右侧电机
+			MOTOR_B_SetSpeed( wheel_pwm_r);//控制右侧电机
 		}
 		else
 		{

@@ -107,6 +107,10 @@ void MOTOR_Init(void)
 
 	//TIM enable counter
 	TIM_Cmd(TIM4, ENABLE);   
+	
+	//使能MOE位
+	TIM_CtrlPWMOutputs(TIM4,ENABLE);	
+
 
 }
 
@@ -121,15 +125,24 @@ void MOTOR_A_SetSpeed(int16_t speed)
 	
 	temp = speed;
 	
-	if(temp>3600)
+	if(temp>3600){
 		temp = 3600;
-	if(temp<-3600)
+	}else if(temp<-3600){
 		temp = -3600;
-	
+	}else{
+		temp = 0;
+	}
+	//设置方向
 	MOTOR_A_SetDirection(temp);
 	if (temp < 0)
 		temp = -temp;
+	//设置速度
 	TIM_SetCompare3(TIM4, (uint16_t)temp);
+	//if (temp > 0){
+	//	TIM_SetCompare3(TIM4,(3600 - temp));
+	//}else{
+	//	TIM_SetCompare3(TIM4,(3600 + temp));
+	//}
 }
 
 /**
@@ -143,15 +156,24 @@ void MOTOR_B_SetSpeed(int16_t speed)
 	
 	temp = speed;
 	
-	if(temp>3600)
+	if(temp>3600){
 		temp = 3600;
-	if(temp<-3600)
+	}else if(temp<-3600){
 		temp = -3600;
-	
+	}else{
+		temp = 0;
+	}
+	//设置方向
 	MOTOR_B_SetDirection(temp);
 	if (temp < 0)
 		temp = -temp;
+	//设置速度
 	TIM_SetCompare4(TIM4, (uint16_t)temp);
+	//if (temp > 0){
+	//	TIM_SetCompare4(TIM4,(3600 - temp));
+	//}else{
+	//	TIM_SetCompare4(TIM4,(3600 + temp));
+	//}
 }
 
 
